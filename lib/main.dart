@@ -66,6 +66,7 @@ class _ClockState extends State<Clock> {
           ),
           Container(
             color: Colors.black,
+            width: size.width / 25,
             height: size.height,
             child: Center(
               child: Text(':',
@@ -86,13 +87,13 @@ class _ClockState extends State<Clock> {
           ),
           Container(
             color: Colors.black,
-            width: size.width / 15,
+            width: size.width * 2 / 25,
             height: size.height / 3,
             child: NixieStack(str: hhmmss[4]),
           ),
           Container(
             color: Colors.black,
-            width: size.width / 15,
+            width: size.width * 2 / 25,
             height: size.height / 3,
             child: NixieStack(str: hhmmss[5]),
           ),
