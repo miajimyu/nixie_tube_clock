@@ -21,7 +21,7 @@ class MyPainter1 extends CustomPainter {
       )
       ..lineTo(
         size.width * 5 / 10,
-        size.height * 1 / 10,
+        size.height * 1.5 / 10,
       )
       ..lineTo(
         size.width * 5 / 10,
