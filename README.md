@@ -1,3 +1,3 @@
 # nixie_tube_clock
 
-![clock](screenshots/gif/clock.gif)
+![clock](screenshots/clock.png)
