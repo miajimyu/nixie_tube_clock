@@ -5,15 +5,12 @@ import 'package:intl/intl.dart' show DateFormat;
 
 import 'widgets/nixie_number.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: const Clock(),
         backgroundColor: Colors.black,
@@ -34,7 +31,7 @@ class _ClockState extends State<Clock> {
 
   @override
   void initState() {
-    Timer.periodic(const Duration(seconds: 1), (Timer v) {
+    Timer.periodic(const Duration(seconds: 1), (v) {
       setState(() {
         _now = DateTime.now();
       });
@@ -45,9 +42,8 @@ class _ClockState extends State<Clock> {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
-    final List<String> hhmmss =
-        DateFormat('Hms').format(_now).replaceAll(':', '').split('');
+    final size = MediaQuery.of(context).size;
+    final hhmmss = DateFormat('Hms').format(_now).replaceAll(':', '').split('');
 
     return SafeArea(
       child: Center(

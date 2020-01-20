@@ -10,16 +10,16 @@ class MyPainter6 extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final Paint myPaint = Paint()
+    final myPaint = Paint()
       ..style = PaintingStyle.stroke
       ..color = color
-      ..maskFilter = const MaskFilter.blur(BlurStyle.solid, 10.0)
+      ..maskFilter = const MaskFilter.blur(BlurStyle.solid, 10)
       ..strokeWidth = strokeWidth;
 
     // Method to convert degree to radians
-    num degToRad(num deg) => deg * (math.pi / 180.0);
+    double degToRad(double deg) => deg * (math.pi / 180.0);
 
-    final Path path = Path()
+    final path = Path()
       ..moveTo(
         size.width * 5 / 10,
         size.height * 1 / 10,

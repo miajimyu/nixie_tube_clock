@@ -8,13 +8,13 @@ class MyPainter1 extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final Paint myPaint = Paint()
+    final myPaint = Paint()
       ..style = PaintingStyle.stroke
       ..color = color
-      ..maskFilter = const MaskFilter.blur(BlurStyle.solid, 10.0)
+      ..maskFilter = const MaskFilter.blur(BlurStyle.solid, 10)
       ..strokeWidth = strokeWidth;
 
-    final Path path = Path()
+    final path = Path()
       ..moveTo(
         size.width * 2 / 10,
         size.height * 3 / 10,

@@ -20,32 +20,32 @@ class NixieStack extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <CustomPaint>[
-        nixieNumber(0, false),
-        if (str == '0') nixieNumber(0, true),
-        nixieNumber(1, false),
-        if (str == '1') nixieNumber(1, true),
-        nixieNumber(2, false),
-        if (str == '2') nixieNumber(2, true),
-        nixieNumber(3, false),
-        if (str == '3') nixieNumber(3, true),
-        nixieNumber(4, false),
-        if (str == '4') nixieNumber(4, true),
-        nixieNumber(5, false),
-        if (str == '5') nixieNumber(5, true),
-        nixieNumber(6, false),
-        if (str == '6') nixieNumber(6, true),
-        nixieNumber(7, false),
-        if (str == '7') nixieNumber(7, true),
-        nixieNumber(8, false),
-        if (str == '8') nixieNumber(8, true),
-        nixieNumber(9, false),
-        if (str == '9') nixieNumber(9, true),
+        nixieNumber(0, isLit: false),
+        if (str == '0') nixieNumber(0, isLit: true),
+        nixieNumber(1, isLit: false),
+        if (str == '1') nixieNumber(1, isLit: true),
+        nixieNumber(2, isLit: false),
+        if (str == '2') nixieNumber(2, isLit: true),
+        nixieNumber(3, isLit: false),
+        if (str == '3') nixieNumber(3, isLit: true),
+        nixieNumber(4, isLit: false),
+        if (str == '4') nixieNumber(4, isLit: true),
+        nixieNumber(5, isLit: false),
+        if (str == '5') nixieNumber(5, isLit: true),
+        nixieNumber(6, isLit: false),
+        if (str == '6') nixieNumber(6, isLit: true),
+        nixieNumber(7, isLit: false),
+        if (str == '7') nixieNumber(7, isLit: true),
+        nixieNumber(8, isLit: false),
+        if (str == '8') nixieNumber(8, isLit: true),
+        nixieNumber(9, isLit: false),
+        if (str == '9') nixieNumber(9, isLit: true),
       ],
     );
   }
 }
 
-CustomPaint nixieNumber(int number, bool isLit) {
+CustomPaint nixieNumber(int number, {bool isLit}) {
   Color color;
   double strokeWidth;
 

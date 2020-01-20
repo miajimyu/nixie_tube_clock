@@ -8,37 +8,37 @@ class MyPainter8 extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final Paint myPaint = Paint()
+    final myPaint = Paint()
       ..style = PaintingStyle.stroke
       ..color = color
-      ..maskFilter = const MaskFilter.blur(BlurStyle.solid, 10.0)
+      ..maskFilter = const MaskFilter.blur(BlurStyle.solid, 10)
       ..strokeWidth = strokeWidth;
 
-    const double L1 = 6.0;
-    const double T1 = 1;
-    const double H1 = 3.5;
+    const l1 = 6;
+    const t1 = 1;
+    const h1 = 3.5;
 
-    const double L2 = 7.0;
-    const double T2 = T1 + H1;
+    const l2 = 7.0;
+    const t2 = t1 + h1;
 
-    final Path path = Path()
+    final path = Path()
       ..moveTo(
         size.width * 2 / 10,
         size.height * 1 / 10,
       )
       ..addOval(
         Rect.fromLTWH(
-          size.width * (10 - L1) / 2 / 10,
-          size.height * T1 / 10,
-          size.width * L1 / 10,
-          size.height * H1 / 10,
+          size.width * (10 - l1) / 2 / 10,
+          size.height * t1 / 10,
+          size.width * l1 / 10,
+          size.height * h1 / 10,
         ),
       )
       ..addOval(
         Rect.fromLTWH(
-          size.width * (10 - L2) / 2 / 10,
-          size.height * T2 / 10,
-          size.width * L2 / 10,
+          size.width * (10 - l2) / 2 / 10,
+          size.height * t2 / 10,
+          size.width * l2 / 10,
           size.height * 4.5 / 10,
         ),
       );
